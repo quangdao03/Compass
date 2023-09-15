@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListCompassDetail"
+    android:background="@drawable/bg_app">
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar_app"/>
+
+    <RelativeLayout
+        android:backgroundTint="#0B275B"
+        android:background="@drawable/bg_button_choose"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <ImageView
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/ic_back_left"
+            android:src="@drawable/ic_back_left"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"/>
+        <ImageView
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/ic_back_right"
+            android:src="@drawable/ic_back_right"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_toStartOf="@id/ic_back_right"
+            android:paddingStart="104dp"
+            android:paddingEnd="104dp"
+            android:layout_toEndOf="@+id/ic_back_left"
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
